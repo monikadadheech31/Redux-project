@@ -1,0 +1,14 @@
+#navbar{
+    background: linear-gradient(to right,white,grey);
+    box-shadow: 2px 3px 4px rgb(75,74,74);
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+#button{
+    margin-left: 55rem;
+    box-shadow: 2px 3px 4px grey;
+}
+body{
+    background: linear-gradient(to right , #ac8bb9,white);
+}
