@@ -13,11 +13,11 @@ import {
 
 
 const ProductCard = () => {
+  const [inputtext, setInputtext] = useState("")
 const dispatch = useDispatch()
 
   const item = useSelector((state) => state.allcard.items);
   // console.log(data);
-const [inputtext,setInputtext] = useState("");
 const inputhandler = (e) =>{
   setInputtext(e.target.value.toLowerCase());
 };
@@ -33,9 +33,9 @@ const inputhandler = (e) =>{
          />
         <MDBRow>
           {item
-          // .filter((el) => el.title.toLowerCase().includes(inputtext))
+         .filter((el)=>el.brand.toLowerCase().includes(inputtext))
           .map((data,key) => (
-            <MDBCol key={data.id} size="md-4 mt-2">
+            <MDBCol key={key} size="md-4 mt-2">
               <MDBCard>
                 <MDBCardImage
                   src={`${data.img}`} style={{height : '20rem'}}
